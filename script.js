@@ -26,6 +26,12 @@ function storeBookmark(e) {
   e.preventDefault();
   const nameValue = websiteNameEl.value;
   let urlValue = websiteUrlEl.value;
+  if (!urlValue.includes('http://', 'https://')) {
+    urlValue = `https://${urlValue}`;
+  }
+  if (!ValidityState(nameValue, urlValue)) {
+    return false;
+  }
 }
 
 // Event Listener
