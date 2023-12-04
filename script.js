@@ -46,7 +46,7 @@ function storeBookmark(e) {
   if (!urlValue.includes('http://', 'https://')) {
     urlValue = `https://${urlValue}`;
   }
-  if (!ValidityState(nameValue, urlValue)) {
+  if (!validate(nameValue, urlValue)) {
     return false;
   }
 }
