@@ -34,6 +34,8 @@ function validate(nameValue, urlValue) {
     alert('Please provide a valid web address');
     return false;
   }
+  // Valid
+  return true;
 }
 
 // Handle Data from Form
