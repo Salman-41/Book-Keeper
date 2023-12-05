@@ -38,6 +38,23 @@ function validate(nameValue, urlValue) {
   return true;
 }
 
+//Fetch Bookmarks
+const fetchBookmarks = function () {
+  // Get bookmarks from localStorage if available
+  if (localStorage.getItem('bookmarks')) {
+    bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+  } else {
+    // Create bookmarks array in localStorage
+    bookmarks = [
+      {
+        name: 'salman portfolio',
+        url: 'https://portfolio.salmanyz',
+      },
+    ];
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+  }
+};
+
 // Handle Data from Form
 function storeBookmark(e) {
   e.preventDefault();
