@@ -23,17 +23,32 @@ window.addEventListener('click', e =>
   e.target === modal ? modal.classList.remove('show-modal') : false
 );
 
+function displayError(message) {
+  const errorDiv = document.createElement('div');
+  errorDiv.textContent = message;
+  errorDiv.classList.add('error');
+
+  // Insert the error message before the form
+  const form = document.getElementById('bookmark-form');
+  form.insertAdjacentElement('beforebegin', errorDiv);
+
+  // Remove the error message after a few seconds
+  setTimeout(() => {
+    errorDiv.remove();
+  }, 3000); // Adjust the duration as needed
+}
+
 // Validate Form
 function validate(nameValue, urlValue) {
   const expression =
     /(https)?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/g;
   const regex = new RegExp(expression);
   if (!nameValue || !urlValue) {
-    alert('Please submit values for both fields.');
+    displayError('Please submit values for both fields.');
     return false;
   }
   if (!urlValue.match(regex)) {
-    alert('Please provide a valid web address.');
+    displayError('Please provide a valid web address.');
     return false;
   }
   // Valid

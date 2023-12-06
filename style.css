@@ -184,6 +184,16 @@ button:focus {
   outline: none;
 }
 
+.error {
+  background-color: #ff9999;
+  color: #990000;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .container {
