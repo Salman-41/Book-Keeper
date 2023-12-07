@@ -37,7 +37,7 @@ The application enables users to:
 
 ## Installation
 
-- Clone this repository to your local machine using `git clone <repository-url>`.
+- Clone this repository to your local machine using `git clone <https://github.com/Salman-41/Book-Keeper.git>`.
 - Open the `index.html` file in your preferred browser.
 
 ## Contributing
