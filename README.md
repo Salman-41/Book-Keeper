@@ -44,10 +44,6 @@ The application enables users to:
 
 Contributions are welcome! Feel free to fork the repository and submit pull requests to contribute to the project.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgements
 
 The application was created as part of a learning exercise and may be improved upon or extended for further functionality.
